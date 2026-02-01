@@ -1,4 +1,4 @@
-```markdown
+
 # DATA-STRUCTURES-PRACTISE
 
 **🐍📚**
@@ -63,4 +63,3 @@ send a pull request!
 ---
 
 **Happy Learning! 🐍**
-```
