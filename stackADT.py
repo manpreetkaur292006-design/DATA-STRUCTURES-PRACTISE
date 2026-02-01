@@ -22,6 +22,15 @@ class StackADT:
         return self.data
     def size(self):
         return len(self.data)
+    
+def Reverse_string(s):
+    s1=StackADT()
+    for ch in s:
+        s1.push(ch)
+    rev=""
+    while not(s1.isEmpty()):
+        rev+=s1.pop()
+    return rev
 
 def main():
     stk=StackADT()
@@ -53,11 +62,15 @@ def main():
             print(stk.size(), "is the size of the stack .")
         elif choice==7:
             print("Reversing a string using stack.")
+            string=input("Enter the string :")
+            print("Reverse string :")
+            print(Reverse_string(string))
         elif choice==8:
             print("Exiting.... Thanks for visiting !!")
             break
         else:
             print("Invalid input !!")
             print("Please enter a valid choice !!")
+            
 if __name__=="__main__":
     main()
