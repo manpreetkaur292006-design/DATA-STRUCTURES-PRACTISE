@@ -23,3 +23,41 @@ class StackADT:
     def size(self):
         return len(self.data)
 
+def main():
+    stk=StackADT()
+    while True:
+        print("*-------------------*")
+        print("StackADT Menu...")
+        print("1. push")
+        print("2. pop")
+        print("3. peek")
+        print("4. isEmpty")
+        print("5. display")
+        print("6. size")
+        print("7. Reverse a string using stack")
+        print("8. Exit")
+        choice = int(input("Enter your choice :")).strip()
+        if choice==1:
+            val=input("Enter your value :")
+            stk.push(val)
+            print(val ,"Pushed successfully !!")
+        elif choice==2:
+            print(stk.pop(),"Pop successful !!")
+        elif choice==3:
+            print(stk.peek(),"Is the TOP of the Stack .")
+        elif choice==4:
+            print(stk.isEmpty())
+        elif choice==5:
+            print(stk.display())
+        elif choice==6:
+            print(stk.size(), "is the size of the stack .")
+        elif choice==7:
+            print("Reversing a string using stack.")
+        elif choice==8:
+            print("Exiting.... Thanks for visiting !!")
+            break
+        else:
+            print("Invalid input !!")
+            print("Please enter a valid choice !!")
+if __name__=="__main__":
+    main()
