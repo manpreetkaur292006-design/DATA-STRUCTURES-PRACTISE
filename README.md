@@ -7,9 +7,17 @@
 
 ## 📚 About This Repository
 
-This repository contains all the practise questions from my university subject **Data Structures**. It includes easy-to-understand explanations, visual examples, code snippets, and implementations to help with learning and revision.
+This repository contains all the practise questions from my university subject **Data Structures**. It includes 
 
-These resources are organized by topic (e.g., `factorial.py`, `fibonacci.py`, `stackADT.py`, etc.) and cover topics taught in the Data Structures curriculum — especially **Python implementations** of fundamental algorithms and data structures.
+easy-to-understand explanations, visual examples, code snippets, and implementations to help with learning and 
+
+revision.
+
+These resources are organized by topic (e.g., `factorial.py`, `fibonacci.py`, `stackADT.py`, etc.) and cover 
+
+topics taught in the Data Structures curriculum — especially **Python implementations** of fundamental 
+
+algorithms and data structures.
 
 ## 🗂️ What's Inside
 
@@ -48,10 +56,11 @@ Open terminal and run: `python filename.py` to test each implementation.
 
 ## 🙌 Connect / Feedback
 
-If you want to suggest improvements, add content, or contribute implementations, feel free to open an issue or send a pull request!
+If you want to suggest improvements, add content, or contribute implementations, feel free to open an issue or 
+
+send a pull request!
 
 ---
 
 **Happy Learning! 🐍**
 ```
-
