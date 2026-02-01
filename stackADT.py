@@ -65,35 +65,35 @@ def main():  # CREATING THE MAIN FUNCTION
         print("7. Reverse a string using stack")
         print("8. Exit")
 
-        choice = int(input("Enter your choice :")).strip() # TAKING THE CHOICE FROM THE USER AS AN INPUT
+        choice = input("Enter your choice :").strip() # TAKING THE CHOICE FROM THE USER AS AN INPUT
 
-        if choice==1:  # PUSH OPERATION
+        if choice=="1":  # PUSH OPERATION
             val=input("Enter your value :")
             stk.push(val)
             print(val ,"Pushed successfully !!")
 
-        elif choice==2:  # POP OPERATION
+        elif choice=="2":  # POP OPERATION
             print(stk.pop(),"Pop successful !!")
              
-        elif choice==3:  # PEEK OPERATION
+        elif choice=="3":  # PEEK OPERATION
             print(stk.peek(),"Is the TOP of the Stack .")
 
-        elif choice==4:   # ISEMPTY OPERATION
+        elif choice=="4":   # ISEMPTY OPERATION
             print(stk.isEmpty())  # WILL RETURN TRUE OR FALSE
 
-        elif choice==5:  # DISPLAY OPERATION
+        elif choice=="5":  # DISPLAY OPERATION
             print(stk.display())
 
-        elif choice==6:  # SIZE OPERATION
+        elif choice=="6":  # SIZE OPERATION
             print(stk.size(), "is the size of the stack .")
 
-        elif choice==7: # REVERSE A STRING USING STACK OPERATION
+        elif choice=="7": # REVERSE A STRING USING STACK OPERATION
             print("Reversing a string using stack.")
             string=input("Enter the string :")
             print("Reverse string :")
             print(Reverse_string(string))
 
-        elif choice==8:  # EXITING THE LOOP 
+        elif choice=="8":  # EXITING THE LOOP 
             print("Exiting.... Thanks for visiting !!")
             break
 
