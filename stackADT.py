@@ -7,24 +7,19 @@ class StackADT:   # DEFINING THE CLASS
         self.data=[] 
 
     def isEmpty(self):    # DEFINING THE isEmpty METHOD
-        if len(self.data)==0:
-            return True
-        else:
-            return False
+        return len(self.data)==0
         
     def push(self,n):    # DEFINING THE push METHOD
-        if self.isEmpty()==True:   # CHECKING THE STACK UNDERFLOW CONDITION
-            return "Stack underflow !"
-        else:
-            return self.data.append(n)    # ADDING THE ELEMENT TO THE STACK
+        return self.data.append(n)    # ADDING THE ELEMENT TO THE STACK
         
     def pop(self):   # DEFINING THE pop METHOD
         if self.isEmpty()==True:   # CHECKING THE STACK UNDERFLOW CONDITION
-            return "Stack underflow !"
-        else:
-            return self.data.pop()   # REMOVING THE TOP ELEMENT FROM THE STACK
+            return None
+        return self.data.pop()   # REMOVING THE TOP ELEMENT FROM THE STACK
         
     def peek(self):  # DEFINING THE PEEK METHOD AND CHECKING THE TOP ELEMENT OF THE STACK
+        if self.isEmpty()==True:   # CHECKING THE STACK UNDERFLOW CONDITION
+            return None
         return self.data[-1]
     
     def display(self):  # DISPLAYING THE WHOLE STACK BY display METHOD
@@ -73,10 +68,16 @@ def main():  # CREATING THE MAIN FUNCTION
             print(val ,"Pushed successfully !!")
 
         elif choice=="2":  # POP OPERATION
-            print(stk.pop(),"Pop successful !!")
+            if stk.isEmpty():
+                print("Stack underflow !")
+            else:
+                print(stk.pop(),"Pop successful !!")
              
         elif choice=="3":  # PEEK OPERATION
-            print(stk.peek(),"Is the TOP of the Stack .")
+            if stk.isEmpty():
+                print("Stack underflow !")
+            else:
+                print(stk.peek(),"Is the TOP of the Stack .")
 
         elif choice=="4":   # ISEMPTY OPERATION
             print(stk.isEmpty())  # WILL RETURN TRUE OR FALSE
@@ -89,9 +90,9 @@ def main():  # CREATING THE MAIN FUNCTION
 
         elif choice=="7": # REVERSE A STRING USING STACK OPERATION
             print("Reversing a string using stack.")
-            string=input("Enter the string :")
+            ustr=input("Enter the string :")
             print("Reverse string :")
-            print(Reverse_string(string))
+            print(Reverse_string(ustr))
 
         elif choice=="8":  # EXITING THE LOOP 
             print("Exiting.... Thanks for visiting !!")
