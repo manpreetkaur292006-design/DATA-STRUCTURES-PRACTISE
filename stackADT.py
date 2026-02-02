@@ -1,5 +1,10 @@
 
+
 # STACK ADT IMPLEMENTATION AND REVERSING THE STRING USING STACK ILLUSTRATION
+
+
+# 1. USING OOPS CONCEPTS
+
 
 class StackADT:   # DEFINING THE CLASS 
 
@@ -104,3 +109,78 @@ def main():  # CREATING THE MAIN FUNCTION
 
 if __name__=="__main__":  
     main()  # CALLING THE MAIN FUNCTION
+
+
+
+# 2. MENU DRIVEN CODE
+
+
+stk=[]  # DECLARING AN EMPTY LIST 
+
+while True:   # RUNNING THE WHILE LOOP
+
+    print("------------------------------")
+    print("1. Push")
+    print("2. Pop")
+    print("3. Peek")
+    print("4. isEmpty")
+    print("5. Size")
+    print("6. Display stack")
+    print("7. Reversing a string using stack")
+    print("0. Exit")
+    print("------------------------------")
+
+    choice=int(input("Enter your choice :"))   # TAKING CHOICE AS AN INPUT FROM THE USER
+
+    if choice==1:   # PUSH OPERATION
+        elt=input("Enter the element you want to add :") 
+        stk.append(elt)
+        print("Pushed value :",elt)
+
+    elif choice==2:   # POP OPERATION
+        popped=stk.pop()
+        if popped==None:
+            print("Stack underflow !")
+        else:
+            print("Popped value :",popped)
+
+    elif choice==3:   # PEEK OPERATION
+        top=stk[-1]
+        if top==None:
+            print("Empty stack.")
+        else:
+            print("Top of the stack :",top)
+
+    elif choice==4:  # ISEMPTY OPERATION
+        if len(stk)==0:
+            print("Stack is Empty.")
+        else:
+            print("Stack is not Empty.")
+
+    elif choice==5:   # SIZE OF THE STACK OPERATION
+        size=len(stk)
+        print("Size of the stack :",size)
+
+    elif choice==6:   # PRINTING THE WHOLE STACK
+        print("Stack :",stk)
+
+    elif choice==7:   # REVERSE THE STRING OPERATION
+        stk_st=[]
+        str=input("Enter the string you want to reverse :")
+        for ch in range(len(str)):
+            stk_st.append(str[ch])
+        rev_str=""
+        while len(stk_st)!=0:
+            rev_str=rev_str+stk_st.pop()
+        print("Reverse of the string :",rev_str)
+
+    elif choice==0:   # EXITING THE LOOP
+        print("Exiting.....Thank you for visiting !!")
+        print("Good Bye !!")
+        break
+
+    else:   # HANDLING THE WRONG INPUTS BY THE USER
+        print("Invalid choice !!")
+        print("Please try again and enter a valid choice...")
+        
+
