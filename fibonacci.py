@@ -16,3 +16,17 @@ else:   # PRINTING THE SERIES USING FOR LOOP
     for i in range(terms):
         print(fib(i),end=" ")
 
+print()
+
+# WRITING THE SAME CODE USING THE LOOP
+n=0
+m=1
+t=int(input("Enter the number of terms:"))
+s=0
+print(n,m,end=" ")
+for i in range(t-2):
+    s=m+n
+    print(s,end=" ")
+    n=m
+    m=s
+
